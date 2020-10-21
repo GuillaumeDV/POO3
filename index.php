@@ -3,6 +3,7 @@
 require_once 'Bicycle.php';
 require_once 'Car.php';
 require_once 'Truck.php';
+require_once 'MotorWay.php';
 $bike = new Bicycle('blue',2); 
 $car = new Car('blue',2,'fuel');
 $bigCar = new Truck('blue',2,'fuel',20);
@@ -32,3 +33,8 @@ echo '<br> Vitesse du Camion : ' . $bigCar->getCurrentSpeed() . ' km/h' . '<br>'
 echo $bigCar->brake();
 echo '<br> Vitesse du Camion : ' . $bigCar->getCurrentSpeed() . ' km/h' . '<br>';
 echo $bigCar->brake();
+
+$road  = new MotorWay();
+
+$road->addVehicule($car);
+var_dump($road);
